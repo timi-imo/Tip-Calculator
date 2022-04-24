@@ -1,13 +1,13 @@
 document.querySelector('#tip-form').onchange = function () {
 
-    var bill = Number(document.getElementById('billTotal').value);
-    var tip = document.getElementById('tipInput').value;
+    let bill = Number(document.getElementById('billTotal').value);
+    let tip = document.getElementById('tipInput').value;
     document.getElementById('tipOutput').innerHTML = `${tip}%`;
-    var tipValue = bill * (tip / 100)
-    var finalBill = bill + tipValue
+    let tipValue = bill * (tip / 100)
+    let finalBill = bill + tipValue
     console.log(finalBill)
-    var tipAmount = document.querySelector('#tipAmount')
-    var totalBillWithTip = document.querySelector('#totalBillWithTip')
+    let tipAmount = document.querySelector('#tipAmount')
+    let totalBillWithTip = document.querySelector('#totalBillWithTip')
 
     tipAmount.value = tipValue.toFixed(2);
     totalBillWithTip.value = finalBill.toFixed(2);

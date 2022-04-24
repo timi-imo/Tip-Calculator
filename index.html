@@ -10,20 +10,21 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
         integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="bg-dark">
-    <div class="container">
+<body style="background-color: royalblue ;">
+    <div class="container" style="background-color: royalblue;">
         <div class="row">
             <div class="col-md-6 mx-auto">
-                <div class="card card-body text-center mt-5">
-                    <h1 class="heading display-5 pb-3">Tip Calculator</h1>
+                <div class="card card-body text-center mt-5" style="background-color: beige;">
+                    <h1 class="heading display-5 pb-3"><b>TIMI'S TIP CALCULATOR</b></h1>
                     <form id="tip-form">
                         <div class="form-group">
                             <div class="input-group">
                                 <span class="input-group-addon">$</span>
-                                <input type="number" class="form-control" id="billTotal" placeholder="Total Bill">
+                                <input type="number" min="0" oninput="this.value = Math.abs(this.value)"
+                                class="form-control" id="billTotal" placeholder="Total Bill" >
                             </div>
                         </div>
                         <div class="form-group tipPersent">
@@ -43,7 +44,7 @@
 
                     <!-- RESULTS -->
                     <div id="results" class="pt-4">
-                        <h5>Results</h5>
+                        <h5><b>Results</b></h5>
                         <div class="form-group">
                             <div class="input-group">
                                 <span class="input-group-addon">Tip amount</span>
@@ -76,7 +77,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"
         integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
         crossorigin="anonymous"></script>
-
+    <script src="app.js"></script>
 </body>
 
 </html>
